@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addTask() {
         const taskText = taskInput.value.trim();
-        if (taskText === "") {
-            alert("Please enter a task.");
-            return;
-        }
+        if (taskText != '') {
+        
 
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
@@ -24,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.appendChild(listItem);
 
         taskInput.value = ""; 
+    }else {  alert("Please enter a task.");
+    return;
+}
     }
 
     addButton.addEventListener('click', addTask);
